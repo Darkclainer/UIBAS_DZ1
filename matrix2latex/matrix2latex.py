@@ -365,7 +365,8 @@ def matrix2latex(matr, filename=None, *environments, **keywords):
             f.write('\n')
         if len(start) == 0:             # do not use if cmidrule is used on last header
             f.write('\t'*tabs)
-            f.write('\\midrule\n')
+            # jupyter fix: midrule -> hline 
+            f.write('\\hline\n')
 
     # Values
     for i in range(0, m):
